@@ -1,4 +1,6 @@
-package Seminar1.Calculator;
+package Homework;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Calculator {
     public static int calculation(int firstOperand, int secondOperand, char operator) {
@@ -40,11 +42,25 @@ public class Calculator {
             return Math.sqrt(num);
     }
 
+
+    // Homework
     // Нужно написать в калькуляторе метод вычисления суммы покупки со скидкой и проверить его, используя AssertJ
     // Примерная сигнатура и тело метода:
-    public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
-        // purchaseAmount - сумма покупки
-        // discountAmount - размер скидки
-        return 0; // Метод должен возвращать сумму покупки со скидкой
+    public static double calculatingDiscount(double purchaseAmount, int discountAmount) { // purchaseAmount - сумма покупки, discountAmount - размер скидки
+        double discountedAmount;
+        assertThat(purchaseAmount, discountAmount)
+                .isNotEmpty()
+                .isNotString();
+        
+        if (purchaseAmount >= 0) {
+            if (discountAmount >= 0 && discountAmount <= 100) {
+                discountedAmount = purchaseAmount - (purchaseAmount * discountAmount) / 100;
+            } else {
+                throw new ArithmeticException("Скидка не может быть больше 100%");
+            }
+        } else {
+            throw new ArithmeticException("Сумма покупки или скидка не могут быть отрицательными");
+        }
+        return discountedAmount;
     }
 }
