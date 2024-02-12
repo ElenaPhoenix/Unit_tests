@@ -1,6 +1,7 @@
-package seminars.second.hw;
+package Homework;
 
 public abstract class Vehicle {
+
     private String company;
     private String model;
     private int yearRelease;

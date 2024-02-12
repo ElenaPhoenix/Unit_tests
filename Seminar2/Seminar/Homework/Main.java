@@ -1,4 +1,4 @@
-package seminars.second.hw;
+package Homework;
 
 public class Main {
 

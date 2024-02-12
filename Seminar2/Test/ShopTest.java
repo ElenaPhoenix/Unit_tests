@@ -1,4 +1,4 @@
-package seminars.second.simple_shopping_cart;
+package Test;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;

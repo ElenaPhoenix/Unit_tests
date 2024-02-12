@@ -1,4 +1,4 @@
-package seminars.second.simple_shopping_cart;
+package simple_shopping_cart;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
