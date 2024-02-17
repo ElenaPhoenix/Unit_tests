@@ -1,4 +1,4 @@
-package Test;
+package Test.Seminar2.simple_shopping_cart;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,7 +18,7 @@ class ShopTest {
 
     // Создаем набор продуктов для магазина:
     public static List<Product> getStoreItems() {
-        List<Product> products = new ArrayList<>();
+        List<Product> products = new ArrayList<>().reversed();
 
         // Три массива Названия, Цены, Кол-во
         String[] productNames = {"bacon", "beef", "ham", "salmon", "carrot", "potato", "onion", "apple", "melon", "rice", "eggs", "yogurt"};

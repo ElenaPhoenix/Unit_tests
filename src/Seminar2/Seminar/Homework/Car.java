@@ -1,4 +1,4 @@
-package Homework;
+package Seminar2.Seminar.Homework;
 
 public class Car extends Vehicle {
 

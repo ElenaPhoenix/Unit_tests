@@ -1,4 +1,4 @@
-package Homework;
+package Seminar2.Seminar.Homework;
 
 public class Motorcycle extends Vehicle {
 
@@ -15,7 +15,6 @@ public class Motorcycle extends Vehicle {
         this.numWheels = 2;
         this.speed = 0;
     }
-
 
     @Override
     public void testDrive() {

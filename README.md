@@ -10,6 +10,12 @@ ok
 apply
 ok
 
+### Создание отдельной директории для тестов
+File -> Project Structure -> при выделенной папке src выбрать вкладку sorces, нажать правой кнопкой мыши на src -> new directory -> <test> -> ok
+Нажать правой кнопкой мыши на появившейся папке test и задать ее как папку для тестовых исходников: отметить галочкой на Tests
+
+
+
 Maven Repository: Search/Browse/Explore https://mvnrepository.com
 
 

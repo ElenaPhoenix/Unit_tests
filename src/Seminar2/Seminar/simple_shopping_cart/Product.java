@@ -1,4 +1,4 @@
-package simple_shopping_cart;
+package Seminar2.Seminar.simple_shopping_cart;
 
 import java.util.Objects;
 

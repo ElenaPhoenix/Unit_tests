@@ -1,4 +1,4 @@
-package Test;
+package Seminar2;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
