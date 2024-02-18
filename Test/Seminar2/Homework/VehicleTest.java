@@ -1,12 +1,9 @@
-package Test.Seminar2.Homework;
+package Seminar2.Homework;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import Seminar2.Seminar.Homework.Car;
-import Seminar2.Seminar.Homework.Motorcycle;
 
 import static org.junit.jupiter.api.Assertions.*;
 

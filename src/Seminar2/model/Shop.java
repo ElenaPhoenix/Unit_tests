@@ -1,4 +1,4 @@
-package Seminar2.Seminar.simple_shopping_cart;
+package Seminar2.model;
 
 import java.util.List;
 

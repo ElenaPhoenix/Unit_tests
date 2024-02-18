@@ -1,4 +1,8 @@
-package Seminar2.Seminar.simple_shopping_cart;
+package Seminar2;
+
+import Seminar2.model.Product;
+import Seminar2.model.Shop;
+import Seminar2.model.TextUserInterface;
 
 import java.util.ArrayList;
 import java.util.List;

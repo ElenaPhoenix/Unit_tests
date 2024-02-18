@@ -1,4 +1,6 @@
-package Seminar2.Seminar.Homework;
+package Seminar2.Homework;
+
+import Seminar2.Homework.Vehicle;
 
 public class Motorcycle extends Vehicle {
 

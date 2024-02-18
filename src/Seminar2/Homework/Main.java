@@ -1,4 +1,4 @@
-package Seminar2.Seminar.Homework;
+package Seminar2.Homework;
 
 public class Main {
 
