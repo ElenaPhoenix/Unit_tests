@@ -3,29 +3,22 @@ package Seminar3.tdd;
 import java.util.ArrayList;
 import java.util.List;
 
-// Добавьте класс UserRepository для управления пользователями. В этот класс должен быть включен метод
-// addUser, который добавляет пользователя в систему, если он прошел аутентификацию.
-// Покройте тестами новую функциональность
+//Добавьте класс UserRepository для управления пользователями. В этот класс должен быть включен метод
+//addUser, который добавляет пользователя в систему, если он прошел аутентификацию. Покройте тестами новую
+//функциональность.
 public class UserRepository {
-    // Тут можно хранить аутентифицированных пользователей
-    List<User> data = new ArrayList<>();
+    List<User> users = new ArrayList<>();
 
-    /**
-     * Добавление пользователя в список аутентифицированных пользователей
-     * @param user
-     */
     public void addUser(User user) {
-        if (user.isAuthentificate) this.data.add(user);
-        else throw new RuntimeException("wrong login or password!");
+        user.isAuthenticateVerify(user.name, user.password);
+        if (user.isAuthenticate) {
+            users.add(user);
+        }
     }
 
-    /**
-     * Проверка находится ли пользователь в списке аутентифицированных пользователей
-     * @param username имя пользователя
-     * @return если является true, иначе false
-     */
+    //    метод поиска пользователя по имени
     public boolean findByName(String username) {
-        for (User user : data) {
+        for (User user : users) {
             if (user.name.equals(username)) {
                 return true;
             }
@@ -33,11 +26,20 @@ public class UserRepository {
         return false;
     }
 
-    /**
-     * Разлогирование пользователей не обладающих правами администратора,
-     * удаляет пользователей из списка аутентифицированных пользователей.
-     */
-    public void logOutExceptAdministrator() {
-        data.removeIf(user -> !user.isRoleAdmin());
+    //    метод, который разлогинивает пользователей, кроме администратора
+    public void logOutAllExceptAdmins() {
+        for (User user : users) {
+            if (!user.isAdmin) {
+                user.logOut();
+            }
+        }
     }
+
+    //    метод, который разлогинивает всех пользователей
+    public void logOutAll() {
+        for (int i = 0; i < users.size(); i++) {
+            users.get(i).isAuthenticate = false;
+        }
+    }
+
 }

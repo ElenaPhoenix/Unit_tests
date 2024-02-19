@@ -1,30 +1,35 @@
 package Seminar3.tdd;
 
-import javax.management.relation.Role;
-
 //Разработайте класс User с методом аутентификации по логину и паролю. Метод должен возвращать true, если
 //введенные логин и пароль корректны, иначе false. Протестируйте все методы.
 public class User {
+
     String name;
     String password;
+    boolean isAdmin;
+    boolean isAuthenticate;
 
-    Role userRole;
-
-    boolean isAuthentificate = false;
-
-    public User(String name, String password, Role userRole) {
+    //    в конструктор передаём параметр isAdmin - является ли наш пользователь администратором или нет
+    public User(String name, String password, boolean isAdmin) {
         this.name = name;
         this.password = password;
-        this.userRole = userRole;
+        this.isAdmin = isAdmin;
     }
 
-    public boolean authentificate(String name, String password) {
-        this.isAuthentificate = (this.name.equals(name) && this.password.equals(password));
-        return this.isAuthentificate;
+    //    метод проверки зарегистрирован пользователь или нет
+    public boolean isAuthenticateVerify(String name, String password) {
+        if (name.equals(this.name) && password.equals(this.password)) {
+            isAuthenticate = true;
+            return true;
+        } else {
+            isAuthenticate = false;
+            return false;
+        }
     }
 
-    public boolean isRoleAdmin() {
-        return this.userRole.equals(Role.ADMIN);
+    //    метод разлогинивания пользователя
+    public void logOut() {
+        this.isAuthenticate = false;
     }
 
 }

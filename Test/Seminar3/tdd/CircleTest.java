@@ -2,7 +2,7 @@ package Seminar3.tdd;
 
 import Seminar3.tdd.Circle;
 import org.junit.jupiter.api.Test;
-
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CircleTest {

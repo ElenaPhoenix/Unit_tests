@@ -1,64 +1,43 @@
 package Seminar3.tdd;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class UserTest {
-    public static User userActual;
-    public static User userFail;
+class UserTest {
 
-    /**
-     * Создаем двух пользователей:
-     * userActual - пользователь удовлетворяющий условиям теста
-     * userFail - пользователь НЕ удовлетворяющий условиям теста
-     */
-    @BeforeAll
-    public static void createUsers() {
-        userActual = new User("someName", "somePassword", Role.ADMIN);
-        userFail = new User("someName", "somePassword", Role.USER);
+    private User user;
+
+    @BeforeEach
+    void setUp() {
+        user = new User("user1", "qwerty", false);
     }
 
-    /**
-     * Тестирование успешной аутентификации пользователя
-     * ожидаем получить от метода authenticate и изменение поля isAuthenticate - true
-     */
     @Test
-    void checkAuthentificatePositive() {
-        userActual.authentificate("someName", "somePassword");
-        assertTrue(userActual.isAuthentificate);
+    @DisplayName("Проверка правильного ввода логина и пароля для пользователя")
+    void testisAuthenticateVerifyCorrect() {
+        assertTrue(user.isAuthenticateVerify("user1", "qwerty"));
     }
 
-    /**
-     * Тестирование отрицательной аутентификации пользователя
-     * ожидаем получить от метода authenticate - false
-     * поле isAuthenticate не подвергается изменению
-     */
     @Test
-    void checkAuthenticateNegative() {
-        userFail.authenticate("wrongName", "wrongPassword");
-        assertFalse(userFail.isAuthenticate);
+    @DisplayName("Проверка на ввод не верного пароля при аутентификации пользователя")
+    void testisAuthenticateVerifyIncorrect() {
+        assertFalse(user.isAuthenticateVerify("user1", "qwer"));
     }
 
-    /**
-     * Тестирование подтверждения роли администратора
-     * для пользователя удовлетворяющего условиям теста
-     * ожидаем получить от метода isRoleAdmin() - true
-     */
     @Test
-    void checkIsRoleAdminPositive() {
-        assertTrue(userActual.isRoleAdmin());
+    @DisplayName("Проверка на ввод пустых строк при аутентификации пользователя")
+    void testIsAuthenticateVerifyEmptyCredentials() {
+        assertFalse(user.isAuthenticateVerify("", ""));
+        assertFalse(user.isAuthenticate);
     }
 
-    /**
-     * Тестирование отсутствия роли администратора
-     * для пользователя НЕ удовлетворяющего условиям теста
-     * ожидаем получить от метода isRoleAdmin() - false
-     */
     @Test
-    void checkIsRoleAdminNegative() {
-        assertFalse(userFail.isRoleAdmin());
+    @DisplayName("Проверка разлоги")
+    void testLogOut() {
+        user.logOut();
+        assertFalse(user.isAuthenticate);
     }
 }

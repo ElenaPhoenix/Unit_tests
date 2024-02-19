@@ -1,75 +1,73 @@
+package Seminar3.tdd;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-public class UserRepositoryTest {
-    public UserRepository userRepository; // временно можно открыть данный класс
-    public User userActual;
-    public User userFail;
+class UserRepositoryTest {
 
-    /**
-     * Создаем объект репозитория,
-     * Пользователя удовлетворяющего условиям теста,
-     * Пользователя не удовлетворяющего условиям теста.
-     */
+    private UserRepository userRepository;
+
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         userRepository = new UserRepository();
-        userActual = new User("someName", "somePassword", Role.ADMIN);
-        userFail = new User("someName", "somePassword", Role.USER);
     }
 
-    /**
-     * Тестирование добавления пользователя в лист аутентифицированных пользователей.
-     * Аутентифицируем пользователя,
-     * добавляем пользователя в лист,
-     * проверяем размер листа,
-     * тест удовлетворяет условиям если размер листа равен 1
-     */
-    @Test
-    void checkAddUserPositive() {
-        userActual.authenticate("someName", "somePassword");
-        userRepository.addUser(userActual);
-        int expectListSize = 1;
-        assertEquals(expectListSize, userRepository.data.size());
+    @AfterEach
+    void tearDown() {
+        userRepository = null;
     }
 
-    /**
-     * Тестирование получения исключения при попытке добавления не аутентифицированного пользователя
-     * в лист аутентифицированных пользователей.
-     * Пытаемся аутентифицировать пользователя заведомо ложными данными,
-     * Ловим исключение при попытке добавить в лист,
-     * Проверяем сообщение полученного исключения.
-     */
     @Test
-    void checkExceptionWithAddUser() {
-        userFail.authenticate("wrongName", "wrongPassword");
-        Exception exception = assertThrows(RuntimeException.class, () -> userRepository.addUser(userActual));
-        String message = "wrong login or password!";
-        assertEquals(message, exception.getMessage());
+    @DisplayName("Проверка метода добавления пользователя в общий список")
+    void testAddUser() {
+        User adminUser = new User("admin", "pass321", true);
+        User regularUser = new User("user1", "qwerty", false);
+        userRepository.addUser(adminUser);
+        assertTrue(userRepository.findByName("admin"));
+
+        userRepository.addUser(regularUser);
+        assertTrue(userRepository.findByName("user1"));
     }
 
-    /**
-     * Тестирование успешного поиска пользователя в листе аутентифицированных пользователей по его имени.
-     * Аутентифицируем пользователя,
-     * добавляем в лист,
-     * Ожидаем успешное завершение теста при проверке наличия добавленного пользователя в листе.
-     */
     @Test
-    void checkFindByNamePositive() {
-        userActual.authenticate("someName", "somePassword");
-        userRepository.addUser(userActual);
-        assertTrue(userRepository.findByName("someName"));
+    @DisplayName("Проверка метода поиска пользователя по логину в общем списке")
+    void testFindByName() {
+        User user = new User("testUser", "password", false);
+        userRepository.addUser(user);
+
+        assertTrue(userRepository.findByName("testUser"));
+        assertFalse(userRepository.findByName("unanimous"));
     }
 
-    /**
-     * Тестирование неудачного поиска пользователя в листе аутентифицированных пользователей по его имени.
-     * Аутентифицируем пользователя,
-     * добавляем в лист,
-     * Ожидаем успешное завершение теста при проверке наличия заведомо несуществующего пользователя в листе.
-     */
     @Test
-    void checkFindByNameNegative() {
-        userActual.authenticate("someName", "somePassword");
-        userRepository.addUser(userActual);
-        assertFalse(userRepository.findByName("wrongName"));
+    @DisplayName("Проверка метода разлогирования всех пользователей кроме администратора")
+    void testLogOutAllExceptAdmins() {
+        User adminUser = new User("admin", "pass321", true);
+        User regularUser = new User("user1", "qwerty", false);
+        userRepository.addUser(adminUser);
+        userRepository.addUser(regularUser);
+
+        userRepository.logOutAllExceptAdmins();
+
+        assertTrue(adminUser.isAuthenticate);
+        assertFalse(regularUser.isAuthenticate);
+    }
+
+    @Test
+    @DisplayName("Проверка метода разлогирования всех пользователей")
+    void testLogOutAll() {
+        User adminUser = new User("admin", "pass321", true);
+        User regularUser = new User("user1", "qwerty", false);
+        userRepository.addUser(adminUser);
+        userRepository.addUser(regularUser);
+
+        userRepository.logOutAll();
+
+        assertFalse(adminUser.isAuthenticate);
+        assertFalse(regularUser.isAuthenticate);
     }
 }

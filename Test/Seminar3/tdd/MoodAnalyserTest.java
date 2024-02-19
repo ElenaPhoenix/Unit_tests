@@ -1,3 +1,5 @@
+package Seminar3.tdd;
+
 import org.junit.jupiter.params.ParameterizedTest;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
