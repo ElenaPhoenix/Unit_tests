@@ -1,4 +1,4 @@
-package seminars.third.tdd;
+package Seminar3.tdd;
 
 import org.junit.jupiter.api.Test;
 

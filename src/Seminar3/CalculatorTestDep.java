@@ -1,3 +1,7 @@
+package Seminar3;
+
+import Seminar2.Calculator;
+
 import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
