@@ -4,12 +4,10 @@ package Seminar3.tdd;
 //выраженное во фразах.
 public class MoodAnalyser {
     public String analyseMood(String message) {
-        if (message.contains("refactor")) {
-            return "Refactor";
-        } else if (message.contains("falling")) {
-            return "Write a falling test";
+        if (message.contains(("грустное"))) {
+            return "SAD";
         } else {
-            return "Make the test pass";
+            return "HAPPY";
         }
     }
 }
