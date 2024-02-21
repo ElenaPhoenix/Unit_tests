@@ -1,15 +1,20 @@
-package Seminar4.weather;
+package Seminar4;
 
 import org.junit.jupiter.api.Test;
-import static org.mockito.Mockito.*;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+
 import java.util.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
 
 class MainTest {
 
     /**
      * 4.0. Проверка работы Mockito
      */
-     @Test
+    @Test
     public void simpleTest() {
         // Создаем мок
         List<String> mockedList = mock(List.class);
@@ -28,13 +33,15 @@ class MainTest {
      * чтобы за два вызова next() Iterator вернул два слова  “Hello World”,
      * и проверить это поведение с помощью утверждений
      */
-      @Test
-      public void iteratorWillReturnHelloWorld() {
-          // Arrange
-          Iterator iteratorMock = mock(Iterator.class);
-          //when(iteratorMock.next()).thenReturn("Hello")...;
-          // Act
-          // ...
-      }
+    @Test
+    public void iteratorWillReturnHelloWorld() {
+        // Arrange
+        Iterator iteratorMock = mock(Iterator.class);
+        when(iteratorMock.next()).thenReturn("Hello").thenReturn("World");
+        // Act
+        String result = iteratorMock.next() + " " + iteratorMock.next();
+        // Assert
+        assertEquals("Hello World", result);
+    }
 
 }
