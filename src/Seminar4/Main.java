@@ -38,12 +38,13 @@ public class Main {
         // Выводим отчет на консоль.
         System.out.println(report);
 
-        //*
-// 4.4.
-//Вам необходимо написать тест с использованием моков для сервиса бронирования отелей.
-//        Условие: У вас есть класс HotelService с методом public boolean isRoomAvailable(int roomId), который обычно проверяет, доступен ли номер в отеле.
-//Вам необходимо проверить правильность работы класса BookingService, который использует HotelService для бронирования номера, если он доступен.
-// *
+
+        /**
+         * 4.4.
+         * Вам необходимо написать тест с использованием моков для сервиса бронирования отелей.
+         * Условие: У вас есть класс HotelService с методом public boolean isRoomAvailable(int roomId), который обычно проверяет, доступен ли номер в отеле.
+         * Вам необходимо проверить правильность работы класса BookingService, который использует HotelService для бронирования номера, если он доступен.
+         */
 
         // Создание реального экземпляра HotelService
         HotelService realHotelService = new HotelService();
@@ -65,27 +66,28 @@ public class Main {
             System.out.println("Не удалось забронировать номер 3.");
         }
 
-            /*
-      4.5. Вам нужно написать тест с использованием моков для сервиса отправки сообщений.
-      Условие: У вас есть класс MessageService с методом public void sendMessage(String message, String recipient),
-      который отправляет сообщение получателю.
-      Вам необходимо проверить правильность работы класса NotificationService,
-      который использует MessageService для отправки уведомлений.
-    */
+        /**
+         * 4.5. Вам нужно написать тест с использованием моков для сервиса отправки сообщений.
+         * Условие: У вас есть класс MessageService с методом public void sendMessage(String message, String recipient),
+         * который отправляет сообщение получателю.
+         * Вам необходимо проверить правильность работы класса NotificationService,
+         * который использует MessageService для отправки уведомлений.
+         */
 
         MessageService messageService = new MessageService();
         NotificationService notificationService = new NotificationService(messageService);
 
         notificationService.sendNotification("Привет!", "Анна");
 
-            /*
-        4.6.Вам требуется протестировать класс, который обрабатывает запросы к базе данных.
-        Условие: У вас есть класс Database с методом public List<String> query(String sql),
-        который выполняет SQL-запрос и возвращает результат.
-        Вам необходимо проверить правильность работы класса DataProcessor, который использует
-        Database для выполнения запроса и обработки результатов.
+        /**
+         * 4.6.
+         * Вам требуется протестировать класс, который обрабатывает запросы к базе данных.
+         * Условие: У вас есть класс Database с методом public List<String> query(String sql),
+         * который выполняет SQL-запрос и возвращает результат.
+         * Вам необходимо проверить правильность работы класса DataProcessor, который использует
+         * Database для выполнения запроса и обработки результатов.
+         */
 
-     */
 
         // Создаём экземпляр класса Database
         Database database = new Database();

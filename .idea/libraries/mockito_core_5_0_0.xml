@@ -4,8 +4,6 @@
       <root url="jar://$PROJECT_DIR$/libs/mockito-core-5.0.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.ideaLibSources/mockito-core-5.0.0-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

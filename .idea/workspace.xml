@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f98617cd-3d58-462a-9646-dc802914518a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/async_http_client_2_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/netty_transport_native_kqueue_4_1_92_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/netty_transport_native_kqueue_4_1_92_Final__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lection5/Конспект к лекции 5. Другие виды тестирования .pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lection5/Презентация к лекции 5. Другие виды тестирования .pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Seminar5/Презентация к семинару 5. Без ответов.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mockito_core_5_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_core_5_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Seminar2/simple_shopping_cart/ShopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Seminar2/simple_shopping_cart/ShopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit_tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Unit_tests.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar2/life_cycle_JUnit5/life_cycle_JUnit5/TestLC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar2/life_cycle_JUnit5/TestLC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar2/model/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar2/model/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar4/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/book/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar4/book/InMemoryBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/book/InMemoryBookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar4/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar4/hotel/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/hotel/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar4/hotel/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/hotel/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar4/weather/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/weather/WeatherService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2chOvf4WtJzcNT7Urf1rTajmrdS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in Unit_tests.executor": "Run",
+    "JUnit.MaxNumberModuleTest.executor": "Run",
+    "JUnit.OrderPaymentIntegrationTest.executor": "Run",
+    "JUnit.RandomNumberModuleTest.executor": "Run",
+    "JUnit.SeleniumTest.AuthorizationTest.executor": "Run",
+    "JUnit.SeleniumTest.executor": "Run",
+    "JUnit.TestLC.executor": "Run",
+    "JUnit.UserIntegrationTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Desktop/Geekbrains/Unit_tests/libs/selenium-java-4.11.0",
+    "onboarding.tips.debug.path": "C:/Users/User/Desktop/Geekbrains/Unit_tests/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.SeleniumTest.AuthorizationTest">
+    <configuration name="All in Unit_tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Unit_tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderPaymentIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Unit_tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Seminar5.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Seminar5.integration" />
+      <option name="MAIN_CLASS_NAME" value="Seminar5.integration.OrderPaymentIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeleniumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Unit_tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Seminar5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Seminar5" />
+      <option name="MAIN_CLASS_NAME" value="Seminar5.SeleniumTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeleniumTest.AuthorizationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Unit_tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Seminar5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Seminar5" />
+      <option name="MAIN_CLASS_NAME" value="Seminar5.SeleniumTest" />
+      <option name="METHOD_NAME" value="AuthorizationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Unit_tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Seminar5.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Seminar5.integration" />
+      <option name="MAIN_CLASS_NAME" value="Seminar5.integration.UserIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SeleniumTest.AuthorizationTest" />
+        <item itemvalue="JUnit.SeleniumTest" />
+        <item itemvalue="JUnit.OrderPaymentIntegrationTest" />
+        <item itemvalue="JUnit.UserIntegrationTest" />
+        <item itemvalue="JUnit.All in Unit_tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-azul-20.0.2-4caba194b151-eb49e076" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f98617cd-3d58-462a-9646-dc802914518a" name="Changes" comment="" />
+      <created>1708560575762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708560575762</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../Program Files/Java/jdk-20/lib/src.zip!/java.base/java/util/ArrayList.java</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
