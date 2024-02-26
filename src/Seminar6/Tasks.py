@@ -1,62 +1,28 @@
 class Tasks:
-    # Задание 1
+# Задание 1
+# Напишите функцию для поиска среднего значения в списке чисел и соответствующие юнит-тесты с использованием
+# фреймворка pytest.
     @staticmethod
     def find_average(numbers):
         if not numbers:
             return 0
         return sum(numbers) / len(numbers)
 
+# Задание 2
+# Модифицируйте функцию find_average так, чтобы она вызывала исключение TypeError, если ей передается не список.
+# Напишите тест, который проверяет вызов этого исключения
+    @staticmethod
+    def average(numbers):
+        if not isinstance(numbers,list):
+            raise TypeError
+        if not numbers:
+            return 0
+        return sum(numbers) / len(numbers)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # Задание 2
-    # @staticmethod
-    # def find_average(numbers):
-    #     if not isinstance(numbers, list):
-    #         raise TypeError("Input should be a list.")
-    #     if not numbers:
-    #         return 0
-    #     return sum(numbers) / len(numbers)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # Задание 3
+# Задание 3
+# Создайте два класса: Person и Bank.Класс Person должен иметь метод transfer_money, который позволяет перевести
+# деньги в Bank.Класс Bank должен иметь метод receive_money. Напишите тесты, проверяющие корректность
+# взаимодействия этих классов.
     class Person:
         def __init__(self, balance=0):
             self.balance = balance
@@ -74,81 +40,33 @@ class Tasks:
         def receive_money(self, amount):
             self.balance += amount
 
+# Задание 4
+# В предыдущем задании используйте unittest.mock для создания мок-объекта Bank.
+# Напишите тест, в котором вы проверите, вызывается ли метод receive_money с правильным аргументом.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # Задание 5
+# Задание 5
+# Напишите функцию divide(a, b), которая возвращает результат деления a на b. Если b равно нулю, функция должна вызывать
+# исключение ZeroDivisionError.
+# Напишите тест, который проверяет, что при попытке деления на ноль функция вызывает исключение ZeroDivisionError.
     @staticmethod
     def divide(a, b):
         if b == 0:
             raise ZeroDivisionError("Cannot divide by zero")
         return a / b
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # Задание 6
+# Задание 6
+# Напишите функцию multiply(a, b), которая возвращает произведение a и b.
+# Затем напишите параметризованный тест, который проверяет эту функцию на нескольких наборах данных.
     @staticmethod
     def multiply(a, b):
         return a * b
 
+# Задание 7
+# Напишите тест, который проверяет, что встроенная функция len возвращает корректную длину строки.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # Задание 8
-    # python -m doctest Tasks.py
+# Задание 8
+# Создайте функцию square(n), которая возвращает квадрат числа n. Напишите doctest, который проверяет работу этой функции.
+# python -m doctest Tasks.py
     @staticmethod
     def square(n):
         """
@@ -160,29 +78,10 @@ class Tasks:
         """
         return n ** 2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # Задание 9
+ # Задание 9
+# Напишите функцию is_prime(n), которая проверяет, является ли число n простым. Простое число - это число, которое
+# делится только на 1 и на себя. Напишите параметризованный тест с использованием pytest.mark.parametrize, который
+# проверяет эту функцию на нескольких наборах данных.
     @staticmethod
     def is_prime(n):
         """Проверяет, является ли число простым."""
